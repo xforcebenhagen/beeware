@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "MyWork"
+bundle = "work.benhagen.nl"
+version = "0.0.1"
+url = "https://work.benhagen.nl"
+license = "Apache Software License"
+author = 'Ben Hagen'
+author_email = "benhagenhome@gmail.com"
+
+[tool.briefcase.app.work]
+formal_name = "work"
+description = "work application"
+icon = "src/work/resources/work"
+sources = ['src/work']
+requires = []
+
+
+[tool.briefcase.app.work.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.work.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.work.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.work.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.work.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
